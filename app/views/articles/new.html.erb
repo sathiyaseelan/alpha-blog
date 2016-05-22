@@ -1,5 +1,13 @@
 Create an article
 
+<% if @article.errors.any? %>
+<h4>The below errors preventing from saving the article</h4>
+    <ul>
+    <%= @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+<% end %>
 <%= form_for @article do |f| %>
  <p>
     <%= f.label :title %> <br/>

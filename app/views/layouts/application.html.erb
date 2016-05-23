@@ -82,26 +82,8 @@
     </style>
 </head>
 <body>
-
-
-<header>Alpha-Blog<br/><p class="caption">Welcome to the world of Bloggers. Write,Rate,Like and Share</p></header>
-    <nav>
-        <ul>
-            <li><a href="<%= articles_path%>">Home</a></li>
-            <li><a href="<%= new_article_path%>">Wanna Write?</a></li>
-            <li><a href="#">I've Shared</a></li>
-            <li><a href="#">Top Rated</a></li>
-            <li><a href="#">Recently Added</a></li>
-        </ul>
-    </nav>
-    <section>
-    <% flash.each do |name,message| %>
-     <ul>
-     <li><%= message%></li>
-   </ul>
-<% end %>
-</section>
-    <section><%= yield %></section>
-    <footer><div class="left-footer">All Rights Reserved.</div><div class="right-footer">Contact us on @support@alpha-blog.com</div></footer>
+    
+   <%= render 'layouts/template1' %>
+    
 </body>
 </html>

@@ -1,10 +1,12 @@
 
-Title you've selected
+Article you've selected
 
 <p>
-    Title is <%= @article.title %>
+    Title : <%= @article.title %>
 </p>
 
 <p>
-    Description is <%= @article.description %>
+    Description : <%= @article.description %>
 </p>
+
+<%= link_to "Edit", edit_article_path %>

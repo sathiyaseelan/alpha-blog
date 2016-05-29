@@ -1,36 +1,26 @@
 <div class = "container" style="min-height:100%">
     <div class="row">
-        <div class='col-xs-12'>
-            <h1>Articles List</h1>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    <% count = 1 %>
+        <div class='col-xs-8 col-xs-offset-2'>
+            <h4 class="center">Articles List</h1>
                 <% @articles.each do |article| %>
-                 <tr>
-                     <td><%= count %></td>
-                     <td><%= link_to article.title, article_path(article) %></td>
-                     <td><%= article.description %></td>
+                 <div class="well">
+                     <div class="article-title">
+                         <%= link_to truncate(article.title, length:50), article_path(article) %>    
+                         <div class="article-action-buttons">
+                             <%= link_to  edit_article_path(article) do %>
+                             <%= content_tag :span,"", class: "glyphicon glyphicon-pencil", :aria_hidden => "true" %>
+                             <% end%>
+                             <%= link_to  article_path(article), method: 'delete', data: {confirm: 'Are you sure want to delete?'} do  %>
+                             <%= content_tag :span,"", :class => "glyphicon glyphicon-trash", :aria_hidden => "true" %>
+                             <% end %>
+                         </div>
+                     </div>
                      
-                     <td><%= link_to  edit_article_path(article) do %>
-                         <%= content_tag :span,"", class: "glyphicon glyphicon-pencil", :aria_hidden => "true" %>
-                     <% end%>
-                     </td>
-                     <td><%= link_to  article_path(article), method: 'delete', data: {confirm: 'Are you sure want to delete?'} do  %>
-                         <%= content_tag :span,"", :class => "glyphicon glyphicon-trash", :aria_hidden => "true" %>
-                     <% end %>
-                     </td>
-                     <% count += 1 %>
-                 </tr>
+                     <div class="article-description">
+                         <%= truncate(article.description, length: 200) %>    
+                     </div>
+                 </div>
                 <% end%>
-                </table>
-            </div>
-    </div>
+        </div>
     </div>
 </div>

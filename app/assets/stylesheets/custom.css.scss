@@ -96,3 +96,20 @@
         .center{
             text-align: center;
         }
+        
+        .article-title {
+            float: left;
+            min-width: 100%;
+        }
+        .article-title a{
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+        .article-action-buttons{
+            float: right;
+        }
+        .article-description{
+            clear: both;
+            padding: 5px;
+        }

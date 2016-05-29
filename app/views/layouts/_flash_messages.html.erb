@@ -1,7 +1,11 @@
-<section>
-    <% flash.each do |name,message| %>
-         <ul>
-             <li><%= message%></li>
-       </ul>
-    <% end %>
-</section>
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <% flash.each do |name,message| %>
+            <div class="alert alert-<%= name%>">
+                <a href="#" class="close" data-dismiss="alert">&#215;</a>
+                <%= content_tag :div, message, :id => "flash_#{name}" if message.is_a?(String) %>
+            </div>
+                 
+        <% end %>
+    </div>
+</div>

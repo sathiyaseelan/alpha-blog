@@ -18,6 +18,8 @@ class ArticlesController < ApplicationController
         
         #render plain: params[:article].inspect
         @article = Article.new(article_params)
+        # debugger to debug the execution using byebug
+        @article.user = User.first
         if @article.save
             flash[:success] = "Your Article has been succefully saved."
             redirect_to article_path(@article)    
@@ -28,6 +30,7 @@ class ArticlesController < ApplicationController
     end
     
     def update
+        @article.user = User.first if @article.user == nil
         if @article.update(article_params)
             flash[:success] = "Your article updated succefully"
             redirect_to article_path(@article)

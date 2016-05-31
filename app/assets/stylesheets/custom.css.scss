@@ -113,3 +113,20 @@
             clear: both;
             padding: 5px;
         }
+        
+        .article-meta-details{
+            color: #000;
+         
+            /*margin-top: 15px;*/
+            width: 100%;
+        }
+        .article-meta-details #left{
+            float: left;
+            /*margin-top: 15px;*/
+            width: 45%;
+        }
+        .article-meta-details #right{
+            float: right;
+            /*margin-top: 15px;*/
+            width: 55%;
+        }

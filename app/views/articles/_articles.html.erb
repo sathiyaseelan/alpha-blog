@@ -1,0 +1,30 @@
+                <% obj.each do |article| %>
+                 <div class="well">
+                     <div class="article-title">
+                         <%= link_to truncate(article.title, length:50), article_path(article) %>    
+                         <div class="article-action-buttons">
+                             <%= link_to  edit_article_path(article) do %>
+                             <%= content_tag :span,"", class: "glyphicon glyphicon-pencil", :aria_hidden => "true" %>
+                             <% end%>
+                             <%= link_to  article_path(article), method: 'delete', data: {confirm: 'Are you sure want to delete?'} do  %>
+                             <%= content_tag :span,"", :class => "glyphicon glyphicon-trash", :aria_hidden => "true" %>
+                             <% end %>
+                         </div>
+                     </div>
+                     
+                     <div class="article-description">
+                         <%= truncate(article.description, length: 200) %>    
+                     </div>
+                     <div class="article-meta-details">
+                         <div id="left">
+                             <small><%= "Created By: #{article.user.username}" if article.user%> </small>
+                         </div>
+                         <div id="right">
+                             <small>
+                                Created: <%= time_ago_in_words article.created_at %> ago,
+                                Last updated: <%= time_ago_in_words article.updated_at %> ago
+                            </small>
+                        </div>
+                     </div>
+                 </div>
+                <% end%>

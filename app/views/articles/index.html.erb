@@ -2,7 +2,13 @@
     <div class="row">
         <div class='col-xs-8 col-xs-offset-2'>
             <h4 class="center">Articles List</h1>
+            <div class="center">
+                <%= will_paginate %>
+            </div>
             <%= render 'articles', obj: @articles %>
+            <div class="center">
+                <%= will_paginate %>
+            </div>
         </div>
     </div>
 </div>

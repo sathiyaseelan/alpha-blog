@@ -8,6 +8,13 @@
     <h4 align="center"><%= @user.username %>'s articles</h4>
     </div>
 </div>
-    <%= render 'articles/articles', obj: @user.articles %>
+    <div class="center">
+        <%= will_paginate @user_articles %>
+    </div>
+   <% # if @user.articles is used then it will getch all. pagination don't work %>
+    <%= render 'articles/articles', obj: @user_articles %>
+    <div class="center">
+        <%= will_paginate @user_articles %>
+    </div>
 
 

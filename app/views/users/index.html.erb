@@ -1,0 +1,22 @@
+<h2 class="center"> Alpha bloggers</h2>
+<div class="center">
+    <%= will_paginate %>
+</div>
+<% @users.each do |user| %>
+    <div class="row">
+        <div class="well col-md-8 col-md-offset-2">
+             <div class="article-meta-details">
+                <div id="left">
+                    <%= link_to gravatar_for(user), user_path(user) %>
+                    <small><%= link_to user.username, user_path(user) %></small>
+                </div>
+                <div id="right">
+                    <small><%= pluralize(user.articles.count,"article") %></small>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+<div class="center">
+    <%= will_paginate %>
+</div>

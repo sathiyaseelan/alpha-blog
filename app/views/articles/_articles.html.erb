@@ -2,7 +2,7 @@
                  <div class="well">
                      <div class="article-title">
                          <%= link_to truncate(article.title, length:50), article_path(article) %>    
-                         <% if current_user == article.user %>
+                         <% if logged_in? and (current_user == article.user  || current_user.admin? ) %>
                              <div class="article-action-buttons">
                                  <%= link_to  edit_article_path(article) do %>
                                  <%= content_tag :span,"", class: "glyphicon glyphicon-pencil", :aria_hidden => "true" %>

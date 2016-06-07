@@ -15,8 +15,8 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="<%= new_article_path%>">Wanna Write?</a></li>
-        <li><a href="<%= articles_path%>">I've Shared</a></li>
-        <li><a href="#">Top Rated</a></li>
+        <li><a href="<%= user_path(current_user) %>">I've Shared</a></li>
+        <li><a href="<%= articles_path%>">Top Rated</a></li>
         <li><a href="#">Recently Added</a></li>
       </ul>
       

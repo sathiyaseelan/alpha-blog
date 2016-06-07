@@ -12,6 +12,11 @@
                 </div>
                 <div id="right">
                     <small><%= pluralize(user.articles.count,"article") %></small>
+                    <% if logged_in? and current_user.admin? %>
+                    <%= link_to  user_path(user), method: 'delete', data: {confirm: 'Are you sure want to delete?'} do  %>
+                                 <%= content_tag :span,"", :class => "glyphicon glyphicon-trash", :aria_hidden => "true" %>
+                                 <% end %>
+                    <% end %>
                 </div>
             </div>
         </div>

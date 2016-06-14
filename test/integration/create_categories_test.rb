@@ -2,6 +2,11 @@ require 'test_helper'
 
 class CreateCategoriesTest < ActionDispatch::IntegrationTest
 
+    def setup
+       @user = User.create(username: "john", email: "john@example.com", password: "password", admin: true) 
+       sign_in_as @user, "password"
+    end
+    
     test "get new category and create category" do
         get new_category_path
         assert_template 'categories/new'
@@ -22,4 +27,5 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
         assert_select 'h2.panel-title'
         assert_select 'div.panel-body'
     end
+    
 end

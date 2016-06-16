@@ -7,6 +7,9 @@
 <div class="well col-xs-8 col-xs-offset-2">
     
     <%= simple_format @article.description %>
+    <% if @article.categories.any?  %>
+        <%= render @article.categories %></p>
+    <% end %>
     <div class="article-actions">
         <% if logged_in? and (current_user == @article.user || current_user.admin?) %>
         <%= link_to "Edit Article", edit_article_path(@article) , class: "btn btn-xs btn-primary"%>

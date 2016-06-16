@@ -1,0 +1,9 @@
+<h2 align="center">List of articles in <%= @category.name %></h2>
+    <div class="center">
+        <%= will_paginate @category_articles %>
+    </div>
+   <% # if @user.articles is used then it will getch all. pagination don't work %>
+    <%= render 'articles/articles', obj: @category_articles %>
+    <div class="center">
+        <%= will_paginate @category_articles %>
+    </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615153508) do
+ActiveRecord::Schema.define(version: 20160710141737) do
 
   create_table "article_category_relations", force: :cascade do |t|
     t.integer "article_id"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20160615153508) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.boolean  "admin",           default: false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
 end

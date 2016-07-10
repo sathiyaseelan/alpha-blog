@@ -3,5 +3,7 @@ class PagesController < ApplicationController
     end
     def about
     end
-    
+
+    def front
+    end
 end

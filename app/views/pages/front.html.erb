@@ -1,0 +1,11 @@
+<style media="screen">
+  .jumbotron { background-image: url(<%= get_quote_of_the_day[:background] %>); background-repeat: no-repeat; background-position: center}
+</style>
+<div class="jumbotron">
+  <h2>Quote for the day</h2>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <p><%= get_quote_of_the_day[:quote]%></p>
+    </div>
+  </div>
+</div>

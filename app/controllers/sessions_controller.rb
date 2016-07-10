@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
     def new
     end
-    
+
     def create
-        user = User.find_by(email: params[:session][:email])
+        user = User.find_by_param(params[:session][:param])
         if user and user.authenticate(params[:session][:password])
             flash[:success] = "Welcome #{user.username}" # For the upcoming request
             session[:user_id] = user.id
@@ -13,10 +13,11 @@ class SessionsController < ApplicationController
             render 'new'
         end
     end
-    
+
     def destroy
         session[:user_id] = nil
         flash[:success] = "Successfully Signed out"
         redirect_to root_path
     end
+
 end

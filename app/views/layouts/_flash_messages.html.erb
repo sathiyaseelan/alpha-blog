@@ -4,8 +4,7 @@
             <div class="alert alert-<%= name%>">
                 <a href="#" class="close" data-dismiss="alert">&#215;</a>
                 <%= content_tag :div, message, :id => "flash_#{name}" if message.is_a?(String) %>
-            </div>
-                 
+            </div>         
         <% end %>
     </div>
 </div>

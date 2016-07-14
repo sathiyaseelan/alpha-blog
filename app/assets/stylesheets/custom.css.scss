@@ -2,138 +2,138 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Varela Round');
-        body {
-            font-family: "Varela Round";
-            background-color: #FDF3E7;
-            color: #C63D0F;
-            margin: 0px;
-            width: 100%;
-            min-height: 100%;
-        }
-        header {
-            height: 100px;
-            width: 100%;
-            color: #DFE2DB;
-            font-size: 40px;
-            background-color: #191919;
-            text-align: center;
-            padding-top:20px;
-            
-        }
-        .caption {
-             font-size: 14px;   
-        }
-        /*nav{
-            background-color: #DFE2DB;
-            height: 50px;
-        }
-        nav ul{
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-        nav li {
-            float: left;
-            height: 100%;
-        }
-        nav li a {
-            background-color: #DFE2DB;
-            color: #191919;
-            padding: 16px 15px;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;
-        }*/
-        nav a:hover{
-            border: 1px solid #000;
-            /*background-color: #A9A9A9;
-            color: #F6F6F6;
-          
-            padding: 16px 15px;
-            text-decoration: none;
-            text-align: center;
-            display: inline-block;*/
-        }
-        footer {
-            
-            background-color: #2B2B2B;
-            color: #DE1B1B;
-            /*position: absolute;
-            bottom: 0;
-            height: 50px;
-            width: 100%;*/
-            font-size: 16px;
-            clear: both;
-            position: relative;
-            z-index: 10;
-            height: 3em;
-            margin-top: -3em;
-            /*position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding: 1rem; */
-        }
-        .left-footer{
-            padding-top: 5px;
-            float: left;
-            text-align: left;
-            width: 50%;
-        }
-        .right-footer{
-            padding-top: 5px;
-            float: right;
-            text-align: right;
-            width: 50%;
-        }
-        
-        .article-actions{
-            border-top: 1px solid #eaeaea;
-            padding: 5px;
-        }
-        
-        .center{
-            text-align: center;
-        }
-        
-        .article-title {
-            float: left;
-            min-width: 100%;
-        }
-        .article-title a{
-            font-weight: bold;
-            text-decoration: none;
+body {
+  font-family: "Varela Round";
+  background-color: #FDF3E7;
+  color: #C63D0F;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+}
+header {
+  height: 100px;
+  width: 100%;
+  color: #DFE2DB;
+  font-size: 40px;
+  background-color: #191919;
+  text-align: center;
+  padding-top:20px;
 
-        }
-        .article-action-buttons{
-            float: right;
-        }
-        .article-description{
-            clear: both;
-            padding: 5px;
-        }
-        
-        .article-meta-details{
-            color: #000;
-         
-            /*margin-top: 15px;*/
-            width: 100%;
-        }
-        .article-meta-details #left{
-            float: left;
-            /*margin-top: 15px;*/
-            width: 45%;
-        }
-        .article-meta-details #right{
-            float: right;
-            /*margin-top: 15px;*/
-            width: 55%;
-        }
-        .badge {
-            background-color: #eaeaea;
-            color: #000;
-            font-weight: bold;
-            font-size:16px;
-            text-decoration: none;
-        }
+}
+.caption {
+   font-size: 14px;
+}
+/*nav{
+  background-color: #DFE2DB;
+  height: 50px;
+}
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+nav li {
+  float: left;
+  height: 100%;
+}
+nav li a {
+  background-color: #DFE2DB;
+  color: #191919;
+  padding: 16px 15px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}*/
+nav a:hover{
+  border: 1px solid #000;
+  /*background-color: #A9A9A9;
+  color: #F6F6F6;
+
+  padding: 16px 15px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;*/
+}
+footer {
+
+  background-color: #2B2B2B;
+  color: #DE1B1B;
+  /*position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;*/
+  font-size: 16px;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 3em;
+  margin-top: -3em;
+  /*position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem; */
+}
+.left-footer{
+  padding-top: 5px;
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+.right-footer{
+  padding-top: 5px;
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+.article-actions{
+  border-top: 1px solid #eaeaea;
+  padding: 5px;
+}
+
+.center{
+  text-align: center;
+}
+
+.article-title {
+  float: left;
+  min-width: 100%;
+}
+.article-title a{
+  font-weight: bold;
+  text-decoration: none;
+
+}
+.article-action-buttons{
+  float: right;
+}
+.article-description{
+  clear: both;
+  padding: 5px;
+}
+
+.article-meta-details{
+  color: #000;
+
+  /*margin-top: 15px;*/
+  width: 100%;
+}
+.article-meta-details #left{
+  float: left;
+  /*margin-top: 15px;*/
+  width: 45%;
+}
+.article-meta-details #right{
+  float: right;
+  /*margin-top: 15px;*/
+  width: 55%;
+}
+.badge {
+  background-color: #eaeaea;
+  color: #000;
+  font-weight: bold;
+  font-size:16px;
+  text-decoration: none;
+}

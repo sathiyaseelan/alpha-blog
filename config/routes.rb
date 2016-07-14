@@ -4,15 +4,17 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
-
-  resources :articles
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
   get 'about', to: "pages#about"
   get 'frontpage', to: "pages#front"
+
+  # Example of regular route:
+  #   get 'products/:id' => 'catalog#view'
   get 'signup', to: "users#new"
+  resources :articles
   resources :users, except: [:new]
   resources :categories, except: [:destroy]
+
+  # Login routes
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
   delete 'logout', to: "sessions#destroy"

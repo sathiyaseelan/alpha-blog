@@ -2,7 +2,6 @@
 
 This is repository for alpha blog developed as part of Complete Ruby On Rails Developer Course.
 
-Announcements
-==
+==Announcements
 
 Going to migrate from Relational DB to NoSQL (mongodb) very soon.
